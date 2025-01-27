@@ -38,6 +38,30 @@ namespace COMP003A.LectureActivity3_1
                 Console.WriteLine("Good Night!");
             }
 
+            // Prompt fpr the day of the week
+            Console.Write("Enter the day of the week: ");
+            string day = Console.ReadLine();
+
+            // Determine the message for the day
+            // Condition 1: Monday
+            // Condition 2: Friday
+            // Condition 3: Sunday
+            // Default: just another day
+            switch (day.ToLower())
+            {
+                case "monday":
+                    Console.WriteLine("Start of the work week.");
+                    break;
+                case "friday":
+                    Console.WriteLine("Almost the weekend!");
+                    break;
+                case "sunday":
+                    Console.WriteLine("Relax, it's Sunday.");
+                    break;
+                default:
+                    Console.WriteLine("Just another day");
+                    break;
+            }
         }
     }
 }
